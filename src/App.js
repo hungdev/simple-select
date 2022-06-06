@@ -11,7 +11,7 @@ export default function App() {
       <div>This is Simple select</div>
       <Select
         options={opsData}
-        isMulti
+        // isMulti
         renderLabel={(item) => <div>hello {item.label}</div>}
       />
     </div>

@@ -8,7 +8,8 @@ const Select = ({
   classNames = '',
   options = [],
   isMulti,
-  renderLabel
+  renderLabel,
+  onChange
 }) => {
   const wrapperRef = useRef(null);
   const [visible, setVisible] = useState(false);
@@ -45,6 +46,8 @@ const Select = ({
     console.log('selected item', item);
     setItemSelected(item);
     setInputValue(item.label);
+    !isMulti && setVisible(false);
+    onChange?.(item);
   };
 
   const onChangeSearch = (ev) => {
