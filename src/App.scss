@@ -1,0 +1,75 @@
+.app-container {
+  padding: 20px
+}
+
+.fn-select {
+  display: inline-block;
+  position: relative;
+  overflow: visible;
+  outline: 0;
+  width: 100%;
+
+  // position
+  .left {
+    left: 0px;
+  }
+
+  .right {
+    right: 0px;
+  }
+
+  .menu-toggle {
+    color: black;
+    cursor: pointer;
+    display: flex;
+    // padding: 10px;
+  }
+
+  .active-box {
+    // box-shadow: -3px 3px 6px rgba(0, 0, 0, 0.161);
+  }
+
+  .menu-dropdown {
+    position: absolute;
+    top: 100%;
+    transition-delay: 0.2s;
+    // left: 0px;
+    // right: 0px;
+    z-index: 400;
+    text-align: start;
+    display: none;
+    background: #fff;
+    width: 100%;
+    // border: 1px solid gray;
+    // padding: 20px;
+    box-shadow: -3px 3px 6px rgba(0, 0, 0, 0.161);
+    max-height: 300px;
+    overflow: auto;
+  }
+
+  .menu-open {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid blue;
+  }
+
+  .input-select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #F0F0F0;
+    border-radius: 4px;
+    outline: none;
+    font-size: 14px;
+    color: #0C2D4D;
+    background: #fff;
+    cursor: pointer;
+    height: 20px;
+  }
+
+  .select-item {
+    padding: 10px 0;
+    border-bottom: 1px solid #F0F0F0;
+    margin: 10px;
+    cursor: pointer;
+  }
+}

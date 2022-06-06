@@ -1,25 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import Select from './Select';
 
-function App() {
+const opsData = Array(30).fill(0).map((_, i) => ({
+  label: `Option ${i + 1}`,
+  value: i + 1
+}));
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='app-container'>
+      <div>This is Simple select</div>
+      <Select
+        options={opsData}
+        isMulti
+        renderLabel={(item) => <div>hello {item.label}</div>}
+      />
     </div>
   );
 }
-
-export default App;
